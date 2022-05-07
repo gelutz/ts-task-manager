@@ -1,0 +1,10 @@
+{
+    "name": "todo",
+    "version": "1.0.0",
+    "license": "MIT",
+    "dependencies": {
+        "@todo/app": "link:app/app",
+        "@todo/client": "link:app/client",
+        "@todo/server": "link:app/server"
+    }
+}
