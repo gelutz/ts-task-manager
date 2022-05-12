@@ -7,10 +7,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.8.8",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^6",
+    "npm": "^8.9.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "run": "^1.4.0",
+    "start": "^5.1.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",

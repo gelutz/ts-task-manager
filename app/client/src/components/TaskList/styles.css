@@ -1,0 +1,7 @@
+.task-container {
+    height: 100%;
+    width: 100%;
+    max-height: 40rem;
+    align-items: center;
+    justify-content: space-evenly;
+}

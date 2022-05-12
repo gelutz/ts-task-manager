@@ -1,4 +1,5 @@
 import React from "react";
+import { Checkbox, Editable, EditableInput, EditablePreview, Flex } from '@chakra-ui/react'
 
 export type TaskType = {
     id: number
@@ -8,20 +9,22 @@ export type TaskType = {
 
 export const Task: React.FC<TaskType> = ({ ...task }) => {
     return <>
-        <span>
-            <div className="check">
-                <button></button>
-            </div>
-            <div className="text-area">
+        <Flex className="task" w="100%" borderBottom={"1px solid grey"}>
+            <Flex w="3rem" align={"center"} justify={"center"}>
+                <Checkbox />
 
-                <div className="title">
-                    <input type="text" name="title" id="id" value="title" />
-                </div>
+            </Flex>
+            <div className="task-info">
 
-                <div className="description">
-                    <input type="text" name="description" id="id" value="description" />
-                </div>
+                <Editable placeholder="Título...">
+                    <EditablePreview />
+                    <EditableInput />
+                </Editable>
+                <Editable placeholder="...">
+                    <EditablePreview />
+                    <EditableInput />
+                </Editable>
             </div>
-        </span>
+        </Flex>
     </>
 }
