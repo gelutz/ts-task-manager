@@ -24,7 +24,8 @@ services:
       - 3000:3000
     volumes:
       - ./app/server:/usr/app/server
-    command: [ "sh", "-c", "cd /usr/app/server && yarn dev" ]
+    entrypoint: [ "npm", "install" ]
+    command: [ "npm", "run", "dev" ]
 
 volumes:
   postgres:

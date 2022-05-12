@@ -9,19 +9,12 @@ install:
 start:
 	make install; \
 	docker-compose up --build -d; \
-	cd app/desktop && yarn start & \
+	# cd app/desktop && yarn start & \
 	docker-compose logs -f;
 
 down:
 	docker-compose down -v --rmi local
 #
 
-
-dev: 
-	docker-compose -f docker-compose.dev.yml up --build
-#
-
-migrate: 
-	cd app/server/docker && 
-#
-
+restart:
+	docker-compose restart && docker-compose logs -f
