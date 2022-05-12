@@ -17,6 +17,10 @@ class TaskController {
 
         return response.status(200).json({ task })
     }
+
+    async all(request: Request, response: Response) {
+        return response.status(200).json(TaskRepository.find({}))
+    }
 }
 
 export default new TaskController()

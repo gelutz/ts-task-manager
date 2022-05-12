@@ -6,6 +6,7 @@ const app = express()
 app.use(cors())
 app.use(express.json());
 app.get('/', (_, response: Response) => { response.json({ teste: 'oi' }) })
+app.get('/task/all', TaskController.all)
 app.get('/task/:id', TaskController.findById)
 
 
