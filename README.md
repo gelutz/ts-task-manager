@@ -5,10 +5,17 @@
 ## Tarefa:
 *Desenvolver um software para cadastrar nome e telefone de pessoas. O sistema deve ter uma tela gráfica (camada de apresentação), uma classe Contato (camada de negócio), que modela o contato a ser armazenado e manipulado pelo sistema e uma classe ContatoDAO (camada de persistência) para salvar os contatos em um arquivo texto.*
 
-## Iniciando:
-Instalando pacotes: `yarn` ou `npm i` ou `pnpm i`
-Rodando projeto: `yarn start`
+## Requisitos:
 
+- pnpm
+> A instalação é feita por padrão com o `pnpm`.
+> Pode ser alterado para yarn/npm alterando a variável `INSTALLER` no arquivo Makefile.
+
+## Rodando o projeto:
+```bash
+# no root do projeto
+$ make start
+```
 ## Projeto rodando:
 
 > Tela inicial

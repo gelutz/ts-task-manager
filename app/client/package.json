@@ -1,6 +1,7 @@
 {
   "name": "@todo/client",
   "version": "0.0.0",
+  "private": "true",
   "scripts": {
     "start": "vite --host",
     "build": "tsc && vite build",

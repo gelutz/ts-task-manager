@@ -2,9 +2,16 @@
     "name": "todo",
     "version": "1.0.0",
     "license": "MIT",
-    "dependencies": {
-        "@todo/app": "link:app/app",
-        "@todo/client": "link:app/client",
-        "@todo/server": "link:app/server"
+    "private": "true",
+    "workspaces": [
+        "app/client",
+        "app/server",
+        "app/desktop"
+    ],
+    "scripts": {
+        "start": "run-s start:*",
+        "start:client": "cd app/client && yarn start",
+        "start:server": "cd app/server && yarn start",
+        "start:desktop": "cd app/desktop && yarn start"
     }
 }

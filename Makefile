@@ -1,8 +1,8 @@
-
+INSTALLER=pnpm
 install:
-	pnpm install; \
+	$(INSTALLER) install; \
 	for file in $$(ls ./app); do \
-        echo "./app/$$file" && cd ./app/$$file && pnpm i && cd ../..; \
+        echo "./app/$$file" && cd ./app/$$file && $(INSTALLER) i && cd ../..; \
     done
 
 .PHONY: start
