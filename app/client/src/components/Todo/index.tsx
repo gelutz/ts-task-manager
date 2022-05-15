@@ -1,9 +1,10 @@
 import { Flex } from "@chakra-ui/react"
 import { TaskList } from "../TaskList"
+import { style } from "./style"
 
 export const Todo = () => {
     return <>
-        <Flex w="100vw" h="100hw" justify={"center"}>
+        <Flex className="baguiu" {...style}>
             <TaskList />
         </Flex>
 
