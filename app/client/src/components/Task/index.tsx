@@ -1,6 +1,6 @@
 import React from "react";
 import { Checkbox, Editable, EditableInput, EditablePreview, Flex } from '@chakra-ui/react'
-import { style } from "../TaskList/style";
+import { style } from "./style";
 
 export type TaskType = {
     id: number
@@ -10,17 +10,16 @@ export type TaskType = {
 
 export const Task: React.FC<TaskType> = ({ ...task }) => {
     return <>
-        <Flex className="task" {...style.flex}>
+        <Flex {...style}>
             <Flex w="3rem" align={"center"} justify={"center"}>
                 <Checkbox />
-
             </Flex>
             <div className="task-info">
-                <Editable placeholder="Título...">
+                <Editable placeholder="Título..." value={task.title}>
                     <EditablePreview />
                     <EditableInput />
                 </Editable>
-                <Editable placeholder="...">
+                <Editable placeholder="..." value={task.description}>
                     <EditablePreview />
                     <EditableInput />
                 </Editable>

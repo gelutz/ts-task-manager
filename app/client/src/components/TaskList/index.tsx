@@ -1,13 +1,13 @@
 import { Flex } from '@chakra-ui/react'
-import { Task } from '../Task'
+import { Task, TaskType } from '../Task'
 import { style } from './style'
 
-export const TaskList = () => {
+export const TaskList: React.FC<{ tasks: TaskType[] }> = ({ tasks }) => {
     return <>
-        <Flex {...style.flex}>
-            <Task key={1} id={1} title={"Task #1"} description="Yeah" />
-            <Task key={2} id={1} title={"Task #1"} description="Yeah" />
-
+        <Flex {...style}>
+            {tasks && tasks.map((el) => {
+                return <Task {...el} />
+            })}
         </Flex>
 
     </>
